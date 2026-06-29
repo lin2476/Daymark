@@ -80,6 +80,11 @@ button:hover {
   box-shadow: var(--shadow-soft);
 }
 
+button:focus-visible {
+  outline: 3px solid rgba(35, 122, 99, 0.24);
+  outline-offset: 3px;
+}
+
 input,
 textarea,
 select {
@@ -550,19 +555,28 @@ p {
   min-height: 44px;
   border: 0;
   border-radius: 999px;
-  color: var(--muted);
-  background: rgba(255, 255, 255, 0.18);
+  color: #4c5a53;
+  background: rgba(255, 255, 255, 0.42);
   box-shadow: none;
 }
 
-.task-actions button:hover {
-  background: rgba(255, 255, 255, 0.45);
+.task-actions button:hover,
+.task-actions button:focus-visible {
+  color: #26342e;
+  background: rgba(255, 255, 255, 0.72);
   box-shadow: none;
 }
 
 .task-actions .primary {
   color: #ffffff;
   background: color-mix(in srgb, var(--goal, var(--green)) 82%, #0d2a21);
+}
+
+.task-actions .primary:hover,
+.task-actions .primary:focus-visible {
+  color: #ffffff;
+  background: color-mix(in srgb, var(--goal, var(--green)) 72%, #061a14);
+  box-shadow: 0 10px 26px color-mix(in srgb, var(--goal, var(--green)) 24%, transparent);
 }
 
 .primary {
